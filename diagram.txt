@@ -1,0 +1,235 @@
+31 134
+program
+0 2
+2
+0 0 declaration
+0 2 EOF
+declaration-list
+3 4
+2
+3 3 declaration
+3 4 eps
+declaration
+7 12
+4
+7 10 type-specifier
+10 11 ID
+11 12 P_var-declaration
+11 12 fun-declaration
+P_var-declaration
+13 14
+4
+13 15 [
+15 16 NUM
+16 13 ]
+13 14 ;
+type-specifier
+17 18
+2
+17 18 int
+17 18 void
+fun-declaration
+21 25
+4
+21 22 (
+22 23 params
+23 24 )
+24 25 compound-stmt
+params
+26 27
+2
+26 27 param-list
+26 27 void
+param-list
+28 30
+2
+28 29 param
+29 30 R_param-list
+R_param-list
+31 33
+3
+31 32 ,
+32 31 param
+31 33 eps
+param
+34 37
+3
+34 35 int
+35 36 ID
+36 37 P_param
+P_param
+38 40
+3
+38 39 [
+39 40 ]
+38 40 eps
+compound-stmt
+41 45
+4
+41 42 {
+42 43 declaration-list
+43 44 statement-list
+44 45 }
+statement-list
+46 47
+2
+46 46 statement
+46 47 eps
+statement
+48 49
+6
+48 49 expression-stmt
+48 49 compound-stmt
+48 49 selection-stmt
+48 49 iteration-stmt
+48 49 return-stmt
+48 49 switch-stmt
+expression-stmt
+50 52
+5
+50 51 expression
+50 51 continue
+50 51 break
+50 52 ;
+51 52 ;
+selection-stmt
+53 60
+7
+53 54 if
+54 55 (
+55 56 expression
+56 57 )
+57 58 statement
+58 59 else
+59 60 statement
+iteration-stmt
+61 66
+5
+61 62 while
+62 63 (
+63 64 expression
+64 65 )
+65 66 statement
+return-stmt
+67 69
+2
+67 68 return
+68 69 R
+R
+70 71
+3
+70 71 ;
+70 72 expression
+72 71 ;
+switch-stmt
+73 81
+8
+73 74 switch
+74 75 (
+75 76 expression
+76 77 )
+77 78 {
+78 79 case-stmts
+79 80 default-stmt
+80 81 }
+case-stmts
+82 83
+2
+82 82 case-stmt
+82 83 eps
+case-stmt
+84 88
+4
+84 85 case
+85 86 NUM
+86 87 :
+87 88 statement-list
+default-stmt
+89 92
+4
+89 90 default
+90 91 :
+91 92 statement-list
+89 92 eps
+expression
+133 96
+27
+133 93 ID
+133 127 NUM
+133 125 (
+125 126 expression
+126 127 )
+93 127 call
+93 94 var
+94 95 =
+95 96 expression
+94 96 eps
+127 96 eps
+127 128 *
+128 127 term
+127 130 +
+127 130 -
+127 132 <
+127 132 ==
+130 131 additive-expression
+131 132 <
+131 132 ==
+131 96 eps
+132 96 additive-expression
+94 132 <
+94 132 ==
+94 128 *
+94 130 +
+94 130 -
+var
+98 101
+4
+98 99 [
+99 100 expression
+100 101 ]
+98 101 eps
+simple-expression
+102 105
+5
+102 103 additive-expression
+103 104 <
+103 104 ==
+104 105 additive-expression
+103 105 eps
+additive-expression
+106 108
+4
+106 107 term
+107 106 +
+107 106 -
+107 108 eps
+term
+109 112
+4
+109 110 factor
+110 111 *
+111 110 term
+110 112 eps
+factor
+113 116
+7
+113 114 (
+114 115 expression
+115 116 )
+134 116 var
+134 116 call
+113 134 ID
+113 116 NUM
+call
+118 121
+3
+118 119 (
+119 120 args
+120 121 )
+args
+122 124
+4
+122 123 expression
+123 122 ,
+122 124 eps
+123 124 eps
